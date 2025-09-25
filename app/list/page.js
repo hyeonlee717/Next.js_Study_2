@@ -6,9 +6,9 @@ export default async function List() {
 
     const db = (await connectDB).db(process.env.DB_NAME);
     let result = await db.collection(process.env.COLLECTION_NAME).find().toArray();
-    result.forEach(function (a) {
-        console.log(a._id.toString());
-    });
+    // result.forEach(function (a) {
+    //     console.log(a._id.toString());
+    // });
 
     return (
         <div className="list-bg">
